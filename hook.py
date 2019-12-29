@@ -41,7 +41,7 @@ else:
 try:
     CF_HEADERS = [{
         'X-Auth-Email': e,
-        'X-Auth-Key'  : k,
+        'Authorization'  : f"Bearer {k}",
         'Content-Type': 'application/json',
     } for e,k in zip(os.environ['CF_EMAIL'].split(), os.environ['CF_KEY'].split()) ]
 except KeyError:
